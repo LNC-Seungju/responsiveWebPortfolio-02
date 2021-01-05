@@ -1,6 +1,8 @@
 @media (max-width: 480px) {
   .pc-header { display: none; }
-  .mobile-dropdown { display: block; }
+  .mobile-header { display: flex; }
+  .mobile-header.fixed { display: flex; }
+
   /* Welcome */
   .welcome { height: 430px; margin: 70px 0 0; }
   .welcome-img { display: none; }
@@ -15,8 +17,8 @@
   .arrival-item { width: 100%; margin: 0 0 50px;}
 
   /* Popular */
-  .popular { height: auto; padding: 0; }
-  .popular-con { width: 100%; padding: 20px; }
+  .popular { width: 480px; height: auto; padding: 0; }
+  .popular-con { width: 100%; padding: 20px; box-sizing: border-box; }
   .popular-con h1 { width: 100%; }
   .popular-con h1 span { font-size: 33px; }
   .popular-content {
@@ -26,10 +28,11 @@
    
   /* Choice */
   .choice { height: auto; }
-  .choice-card { flex-direction: column; margin: 0; }
+  .choice-con { width: 100%; }
+  .choice-card { flex-direction: column; width: 100%; margin: 0; }
   .choice-text { padding: 0 20px; box-sizing: border-box; margin: 0 0 40px; }
   .choice-text > h1 { font-size: 29px; }
-  .choice-card img { margin: 0 0 40px; }
+  .choice-card img { width: 100%; margin: 0 0 40px; }
 
   /* Card */
   .card { height: auto; }

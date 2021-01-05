@@ -12,7 +12,7 @@ input, button { padding: 0; outline: none; }
 .pc-header { 
   position: absolute;
   top: 0; left: 0; 
-  z-index: 1;
+  z-index: 2;
   width: 100%; height: 100px; 
   background-color: #fff; 
   transition: 1s;
@@ -93,14 +93,18 @@ input, button { padding: 0; outline: none; }
 
 /* Mobile Header */
 .mobile-header {
+  display: none;
   position: absolute;
   top:0; left: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%; height: 70px;
   background-color: #fff;
 }
 .mobile-header.fixed {
+  display: none;
   position: fixed;
   top: 0; left: 0;
   width: 480px; 
@@ -122,16 +126,15 @@ input, button { padding: 0; outline: none; }
 .mobile-trigger > span:nth-child(3) { top: 80%; }
 
 .mobile-dropdown { 
-  display: none;
   position: absolute; 
   top: 100%; left: 0; z-index: 1;
-  width: 100%; max-height: 1000px;
+  width: 100%; max-height: 0;
   color: #474747;
   background-color: #fff;
   transition: .5s;
   overflow: hidden;
 }
-.mobile-dropdown.dropdown { max-height: 0; }
+.mobile-dropdown.dropdown { max-height: 1000px; }
 .mobile-dropdown > li > a,
 .mobile-submenu-title > a:nth-child(1) {
   display: block; 
